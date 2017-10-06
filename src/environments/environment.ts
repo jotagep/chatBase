@@ -6,11 +6,11 @@
 export const environment = {
   production: false,
   firebase : {
-    apiKey: 'AIzaSyA6EevHQN_wKEmHdn-Xp98lNRFkhtdxuKI',
-    authDomain: 'chatbase-bd38b.firebaseapp.com',
-    databaseURL: 'https://chatbase-bd38b.firebaseio.com',
-    projectId: 'chatbase-bd38b',
-    storageBucket: '',
-    messagingSenderId: '801887921872'
+    apiKey: '<your-key>',
+    authDomain: '<your-project-authdomain>',
+    databaseURL: '<your-database-URL>',
+    projectId: '<your-project-id>',
+    storageBucket: '<your-storage-bucket>',
+    messagingSenderId: '<your-messaging-sender-id>'
   }
 };
