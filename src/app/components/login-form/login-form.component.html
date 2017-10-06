@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="loginCard">
+    <form #loginForm="ngForm">
+      <h2 class="heading">Log In</h2>
+      <input [(ngModel)]="email" #userEmail="ngModel" placeholder="Enter your email address" type="email" name="email" class="formInput"
+        maxlength="60" required/>
+
+      <div *ngIf="userEmail.invalid && (userEmail.dirty || userEmail.touched)" class="alert">
+
+        <div *ngIf="userEmail.errors.required">
+          Name is required.
+        </div>
+        <div *ngIf="userEmail.errors.maxlength">
+          Name must be less 60 characters long.
+        </div>
+
+      </div>
+
+      <input type="password" [(ngModel)]="password" #userPass="ngModel" placeholder="Enter a password" name="password" class="formInput" minlength="6"
+        required/>
+
+      <div *ngIf="userPass.invalid && (userPass.dirty || userPass.touched)" class="alert">
+
+        <div *ngIf="userPass.errors.required">
+          Password is required.
+        </div>
+        <div *ngIf="userPass.errors.minlength">
+          Name must be at least 6 characters long.
+        </div>
+
+      </div>
+
+      <button [disabled]="!loginForm.form.valid" type="submit" class="btn" id="btn-login" (click)="login()">
+                Log In
+        </button>
+    </form>
+  </div>
+</div>
